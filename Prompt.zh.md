@@ -5,6 +5,7 @@
 - 创建`shop`表，最新flyway的结构
 - 创建ShopMapper类，负责和MyBatis进行交互，同时完成ShopMapper在MyBatisConfiguration类中的bean注册
 - 创建MyBatis的SQL XML Mapper文件
+- 修改`mybatis-config.xml`文件的配置，添加shop对应的typeAlias和mapper
 - 完成对应的测试用例创建
 
 请参考LegoSet的带实现，完成Shop的创建。
