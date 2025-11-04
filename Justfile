@@ -8,7 +8,7 @@ database-migrate:
     mvn org.flywaydb:flyway-maven-plugin:11.15.0:migrate
 
 # generate DTD for database
-db-dtd-generation:
+db-dtd-generation: database-migrate
     mvn surefire:test -Dtest=DataBaseTest
 
 # mysql CLI
