@@ -5,6 +5,7 @@ Please create a `shop` table with three columns: `id`, `name`, and `address`, an
 - Create the `shop` table following the latest Flyway structure
 - Create ShopMapper class responsible for interacting with MyBatis, and complete ShopMapper bean registration in the MyBatisConfiguration class
 - Create MyBatis SQL XML Mapper file
+- Modify `mybatis-config.xml` and add `typeAlias` and `mapper` for shop
 - Complete corresponding test case creation
 
 Please refer to the LegoSet implementation to complete the Shop creation.
