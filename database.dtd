@@ -18,6 +18,7 @@
 
 <!ELEMENT lego_set EMPTY>
 <!ATTLIST lego_set
-    id CDATA #IMPLIED
+    id CDATA #REQUIRED
     name CDATA #IMPLIED
 >
+

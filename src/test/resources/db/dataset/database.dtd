@@ -1,8 +1,6 @@
 <!ELEMENT dataset (
     flyway_schema_history*,
-    lego_set*,
-    manual*,
-    model*)>
+    lego_set*)>
 
 <!ELEMENT flyway_schema_history EMPTY>
 <!ATTLIST flyway_schema_history
@@ -20,7 +18,7 @@
 
 <!ELEMENT lego_set EMPTY>
 <!ATTLIST lego_set
-    id CDATA #IMPLIED
+    id CDATA #REQUIRED
     name CDATA #IMPLIED
 >
 
