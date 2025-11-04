@@ -23,7 +23,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@DataSet("db/datasets/lego-set.xml")
+@DataSet("db/dataset/lego-set.xml")
 public class LegoSetMapperTest extends ProjectBaseTest {
     @Autowired
     LegoSetMapper legoSetMapper;
