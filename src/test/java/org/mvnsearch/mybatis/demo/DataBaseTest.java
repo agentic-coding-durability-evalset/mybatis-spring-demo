@@ -12,7 +12,7 @@ import java.io.FileOutputStream;
 public class DataBaseTest extends ProjectBaseTest {
 
     @Test
-    @DataSet(value = "db/datasets/lego-set.xml")
+    @DataSet(value = "db/dataset/lego-set.xml")
     public void testLoadData() {
 
     }
