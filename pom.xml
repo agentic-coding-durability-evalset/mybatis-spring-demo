@@ -22,6 +22,9 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <mybatis-spring-boot.version>3.0.5</mybatis-spring-boot.version>
         <database-rider.version>1.44.0</database-rider.version>
+        <jdbc_url>jdbc:mysql://localhost:13306/test</jdbc_url>
+        <jdbc_user>root</jdbc_user>
+        <jdbc_password>123456</jdbc_password>
     </properties>
 
     <dependencies>
@@ -104,6 +107,31 @@
                 <version>3.14.1</version>
                 <configuration>
                     <parameters>true</parameters>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.flywaydb</groupId>
+                        <artifactId>flyway-core</artifactId>
+                        <version>${flyway.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.flywaydb</groupId>
+                        <artifactId>flyway-mysql</artifactId>
+                        <version>${flyway.version}</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <url>${jdbc_url}</url>
+                    <user>${jdbc_user}</user>
+                    <password>${jdbc_password}</password>
+                    <locations>
+                        <location>filesystem:src/test/resources/db/migration</location>
+                    </locations>
+                    <cleanDisabled>false</cleanDisabled>
                 </configuration>
             </plugin>
         </plugins>
