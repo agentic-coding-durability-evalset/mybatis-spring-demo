@@ -20,6 +20,7 @@ public class DataBaseTest extends ProjectBaseTest {
     @Test
     public void testDTDGeneration(@Autowired DataSource dataSource) throws Exception {
         DatabaseConnection databaseConnection = new DatabaseConnection(dataSource.getConnection());
-        FlatDtdDataSet.write(databaseConnection.createDataSet(), new FileOutputStream("target/database.dtd"));
+        FlatDtdDataSet.write(databaseConnection.createDataSet(), new FileOutputStream("database.dtd"));
+        FlatDtdDataSet.write(databaseConnection.createDataSet(), new FileOutputStream("src/test/resources/db/dataset/database.dtd"));
     }
 }
