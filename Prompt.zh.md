@@ -1,5 +1,9 @@
-# 新需求
+## 任务1
 
+**任务类型：** 需求实现
+
+**提示词：**
+```
 请创建`shop`表，包括`id`、`name`和`address`三个column，同时完成以下工作：
 
 - 创建`shop`表，最新flyway的结构
@@ -9,11 +13,18 @@
 - 完成对应的测试用例创建
 
 请参考LegoSet的带实现，完成Shop的创建。
+```
 
-# 代码重构
 
+## 任务2
+
+**任务类型：** 代码重构
+
+**提示词：**
+```
 请为`lego_set`表添加`description`列，类型为`varchar(256)`，请同步完成以下工作：
 
 - 更新LegoSet类，添加`description`属性
 - 为`lego-set.xml`添加description样例数据
 - 调整`LegoSet.xml`文件，增加`description`列支持
+```

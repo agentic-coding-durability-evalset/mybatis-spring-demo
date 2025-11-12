@@ -14,7 +14,7 @@ Please create a `shop` table with three columns: `id`, `name`, and `address`, an
 
 Please refer to the LegoSet implementation to complete the Shop creation.
 ```
----
+
 
 ## Task 2
 
