@@ -46,10 +46,6 @@ mybatis-spring-demo/
 ### 安装和运行
 
 ```bash
-# 克隆项目
-git clone <repository-url>
-cd mybatis-spring-demo
-
 # 使用 Docker Compose 启动 MySQL
 docker-compose up -d
 
