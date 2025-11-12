@@ -1,90 +1,90 @@
 # MyBatis Spring Demo
 
-一个基于 [MyBatis](https://mybatis.org/) 和 [Spring Boot](https://spring.io/projects/spring-boot) 的 Java Web 应用示例项目。展示了如何使用 MyBatis 作为 ORM 框架与 Spring Boot 集成。
+A Java Web application demo project based on [MyBatis](https://mybatis.org/) and [Spring Boot](https://spring.io/projects/spring-boot). Demonstrates how to integrate MyBatis as an ORM framework with Spring Boot.
 
-## 技术栈
+## Tech Stack
 
 - **Java**: 21
 - **Spring Boot**: 3.5.7
 - **MyBatis Spring Boot**: 3.0.5
-- **MySQL**: 数据库
-- **Maven**: 构建工具
+- **MySQL**: Database
+- **Maven**: Build tool
 
-## 项目结构
+## Project Structure
 
 ```
 mybatis-spring-demo/
 ├── src/
 │   ├── main/
 │   │   ├── java/
-│   │   │   └── ...       # Java 源代码
+│   │   │   └── ...       # Java source code
 │   │   └── resources/
-│   │       ├── mapper/   # MyBatis Mapper XML 文件
+│   │       ├── mapper/   # MyBatis Mapper XML files
 │   │       └── application.properties
-│   └── test/             # 测试代码
-├── pom.xml               # Maven 依赖配置
-├── docker-compose.yml    # Docker Compose 配置
-├── Justfile              # Just 构建工具配置
+│   └── test/             # Test code
+├── pom.xml               # Maven dependency configuration
+├── docker-compose.yml    # Docker Compose configuration
+├── Justfile              # Just build tool configuration
 └── README.md
 ```
 
-## 功能特性
+## Features
 
-- MyBatis ORM 集成
-- Spring Boot Web 支持
-- MySQL 数据库连接
-- Mapper XML 配置
+- MyBatis ORM integration
+- Spring Boot Web support
+- MySQL database connection
+- Mapper XML configuration
 
-## 快速开始
+## Quick Start
 
-### 前置要求
+### Prerequisites
 
-- Java 21 或更高版本
+- Java 21 or higher
 - Maven 3.6+
-- MySQL 8.0+ (或使用 Docker Compose)
+- MySQL 8.0+ (or use Docker Compose)
 
-### 安装和运行
+### Installation and Running
 
 ```bash
-# 使用 Docker Compose 启动 MySQL
+# Start MySQL using Docker Compose
 docker-compose up -d
 
-# 构建项目
+# Build project
 mvn clean package
 
-# 运行应用
+# Run application
 mvn spring-boot:run
-# 或
+# Or
 java -jar target/mybatis-spring-demo-1.0.0-SNAPSHOT.jar
 ```
 
-应用将在 `http://localhost:8080` 启动。
+The application will start at `http://localhost:8080`.
 
-### 数据库配置
+### Database Configuration
 
-默认配置（可在 `application.properties` 中修改）：
+Default configuration (can be modified in `application.properties`):
 - **URL**: `jdbc:mysql://localhost:13306/test`
-- **用户名**: `root`
-- **密码**: `123456`
+- **Username**: `root`
+- **Password**: `123456`
 
-## 配置说明
+## Configuration Details
 
 ### application.properties
 
 ```properties
-# 数据库配置
+# Database configuration
 spring.datasource.url=jdbc:mysql://localhost:13306/test
 spring.datasource.username=root
 spring.datasource.password=123456
 
-# MyBatis 配置
+# MyBatis configuration
 mybatis.mapper-locations=classpath:mapper/*.xml
 mybatis.type-aliases-package=com.example.model
 ```
 
-## 参考资源
+## References
 
-- [MyBatis 文档](https://mybatis.org/mybatis-3/)
+- [MyBatis Documentation](https://mybatis.org/mybatis-3/)
 - [MyBatis Spring Boot Starter](https://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)
-- [Spring Boot 文档](https://spring.io/projects/spring-boot)
-- [Spring Boot + MyBatis 示例](https://github.com/mybatis/spring-boot-starter)
+- [Spring Boot Documentation](https://spring.io/projects/spring-boot)
+- [Spring Boot + MyBatis Examples](https://github.com/mybatis/spring-boot-starter)
